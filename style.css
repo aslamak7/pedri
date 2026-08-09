@@ -1132,6 +1132,26 @@ img,
         height: auto;
     }
 
+    .qualification .resume-btn {
+        display: inline-flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        position: relative !important;
+        z-index: 9999 !important;
+
+        align-items: center;
+        justify-content: center;
+
+        width: auto !important;
+        height: auto !important;
+
+        margin: 20px auto !important;
+        padding: 10px 20px !important;
+
+        font-size: 14px !important;
+    }
+}
 
 
    
@@ -1216,4 +1236,3 @@ img,
     }
 }
 
-}
