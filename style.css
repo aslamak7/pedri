@@ -221,7 +221,8 @@ h1,h2,h3{
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("try2.png");
+    background-color: #000;
+    background-image: url("try2.webp");
     opacity: 50%;
 background-size: cover;
 background-position: center;
@@ -231,7 +232,7 @@ background-repeat: no-repeat;
 @media(max-width:768px)
 {
     .hero::before{
-        background-image: url("try5.png");
+        background-image: url("try5.webp");
     }
 }
 
@@ -401,6 +402,7 @@ position: relative;
 =========================== */
 
 .qualification{
+    position: relative;
 
     margin-top:30px;
 }
@@ -427,6 +429,37 @@ position: relative;
 
     color:#000000;
 }
+
+/* RESUME BUTTON */
+/* Resume Button */
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 25px;
+    padding: 12px 24px;
+
+    color: #fff;
+    background: #515052;
+
+    border: 1px solid #000000;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1;
+
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
 
 /* =========================
    SKILLS SECTION
@@ -629,9 +662,11 @@ position: relative;
 /* Cards container */
 
 .projects-scroll {
+    
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 28px;
+
 }
 
 
@@ -787,6 +822,8 @@ position: relative;
     }
 
     .projects-scroll {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
         display: flex;
         gap: 12px;
 
