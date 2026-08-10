@@ -863,6 +863,7 @@ position: relative;
 /* Description */
 
 .project-content p {
+    height: 150px;
     text-align: center;
     color: rgba(255, 255, 255, 0.75);
     margin-top: 12px;
@@ -871,7 +872,7 @@ position: relative;
 
     line-height: 1.7;
 
-    margin-bottom: 20px;
+    margin-bottom:15px;
 }
 
 
@@ -1026,7 +1027,7 @@ position: relative;
 
         line-height:2;
 
-        margin-bottom: 15px;
+        
     }
 
 
