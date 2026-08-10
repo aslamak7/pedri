@@ -1001,6 +1001,10 @@ position: relative;
     .photoshop-tag {
         display: none;
     }
+    .figma-tag {
+        display: none;
+    }
+
 
     .project-tags span {
         font-size: 9px;
