@@ -205,6 +205,87 @@ h1,h2,h3{
    HERO
 =========================== */
 
+
+
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+         #6a686e,
+        
+        #f8f8fa
+    );
+    background-size: 250% auto;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
+}
+.work-btn {
+
+    
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    margin-top: 25px;
+
+    color: #000000;
+    background: #515052;
+    border: 3px solid #ffffff;
+    border-radius: 60px;
+
+    font-size: 10px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.work-btn span {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.work-btn:hover {
+    color: black;
+     transform: scale(1.3) translateY(-5px); 
+     background-color:white;
+      box-shadow: 0 0 25px #7c3aed; 
+}
+
+.work-btn:hover span {
+    transform: translateX(6px);
+}
+
+/* Click effect */
+.work-btn:active {
+    transform: translateY(-1px) scale(0.97);
+}
+
+
+
+
 .hero{
 
     min-height:100vh;
@@ -222,8 +303,9 @@ h1,h2,h3{
     position: absolute;
     inset: 0;
     background-color: #000;
+    
     background-image: url("try2.webp");
-    opacity: 50%;
+    
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -233,6 +315,7 @@ background-repeat: no-repeat;
 {
     .hero::before{
         background-image: url("try5.webp");
+        
     }
 }
 
@@ -363,6 +446,7 @@ background-repeat: no-repeat;
 }
 
 .about p{
+   
 
     color:#000000;
 
@@ -602,6 +686,9 @@ position: relative;
 
 @media (max-width: 600px) {
 
+
+   .about p{ font-size: 12px;}
+
     .skills {
         padding: 50px 0;
     }
@@ -687,7 +774,7 @@ position: relative;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 
-    transition: 0.3s ease;
+    transition: 0.3s ease , box-shadow 0.4s ease;
 
     display: flex;
     flex-direction: column;
@@ -701,19 +788,24 @@ position: relative;
 
     border-color:  rgba(219, 209, 222, 0.8);
 
-    box-shadow: 0 20px 50px rgba(124, 58, 237, 0.15);
+    box-shadow: 0 20px 50px rgba(34, 34, 35, 0.15);
 }
 
 
 /* Project image */
 
-.project-card > img {
+.project-card  img {
     width: 100%;
     height: 210px;
 
     object-fit: cover;
 
     display: block;
+    transition: (-5px);
+    z-index: 2;
+}
+.project-card:hover img{
+    transform: scale(1.08);
 }
 
 
@@ -822,23 +914,25 @@ position: relative;
     }
 
     .projects-scroll {
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-        display: flex;
-        gap: 12px;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 
-        overflow-x: auto;
+    display: flex;
+    gap: 12px;
 
-        padding: 5px 20px 15px;
+    padding: 30px 20px 15px;
 
-        scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    overflow-y: visible !important;
 
-        scrollbar-width: none;
-    }
+    scroll-snap-type: x mandatory;
 
-    .projects-scroll::-webkit-scrollbar {
-        display: none;
-    }
+    scrollbar-width: none;
+}
+
+.projects-scroll::-webkit-scrollbar {
+    display: none;
+}
 
 
     /* TWO CARDS ON SCREEN */
@@ -851,7 +945,8 @@ position: relative;
 
         border-radius: 16px;
 
-        scroll-snap-align: start;
+        scroll-snap-align:center;
+        overflow: hidden;
 
         display: flex;
         flex-direction: column;
@@ -862,12 +957,16 @@ position: relative;
 
     .project-card > img {
         width: 100%;
-        height: 105px;
+        height: 155px;
 
         object-fit: cover;
 
         flex-shrink: 0;
+
     }
+
+
+    
 
 
     /* CONTENT */
@@ -897,6 +996,10 @@ position: relative;
         gap: 4px;
 
         margin-bottom: 20px;
+    }
+
+    .photoshop-tag {
+        display: none;
     }
 
     .project-tags span {
@@ -1036,7 +1139,22 @@ img,
 }
 
 
+.footer {
+    width: 100%;
+    padding: 25px 20px;
 
+    background: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    color:rgb(58, 51, 51);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
 
 /* =========================================
    TABLET / SMALL LAPTOP
